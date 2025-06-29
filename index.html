@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe Coding Educativo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #4F46E5, #0EA5E9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 50%;
+            background-color: #4F46E5;
+            transition: all 0.3s ease-in-out;
+            transform: translateX(-50%);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- Navegación -->
+    <nav class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 border-b border-gray-200">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold gradient-text">Vibe Coding Educativo</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#que-es" class="nav-link text-gray-600 hover:text-indigo-600 font-medium">Qué es</a>
+                <a href="#comunidad" class="nav-link text-gray-600 hover:text-indigo-600 font-medium">Comunidad</a>
+                <a href="#apps" class="nav-link text-gray-600 hover:text-indigo-600 font-medium">Aplicaciones</a>
+                <a href="#recursos" class="nav-link text-gray-600 hover:text-indigo-600 font-medium">Recursos</a>
+            </div>
+             <a href="https://t.me/vceduca" target="_blank" class="hidden md:inline-block bg-indigo-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-indigo-700 transition duration-300 shadow-md">
+                Únete al Grupo
+            </a>
+            <button id="mobile-menu-button" class="md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <!-- Menú Móvil -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#que-es" class="block py-2 px-4 text-sm hover:bg-gray-100">Qué es</a>
+            <a href="#comunidad" class="block py-2 px-4 text-sm hover:bg-gray-100">Comunidad</a>
+            <a href="#apps" class="block py-2 px-4 text-sm hover:bg-gray-100">Aplicaciones</a>
+            <a href="#recursos" class="block py-2 px-4 text-sm hover:bg-gray-100">Recursos</a>
+             <a href="https://t.me/vceduca" target="_blank" class="block py-3 px-4 text-sm bg-indigo-600 text-white text-center font-bold">
+                Únete al Grupo
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-white">
+        <div class="container mx-auto px-6 py-16 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold gradient-text">Programa con Propósito y Vibe</h1>
+            <p class="text-lg md:text-xl text-gray-600 mt-4 max-w-3xl mx-auto">Un espacio para crear, compartir y aprender a desarrollar aplicaciones educativas con lenguaje natural e Inteligencia Artificial.</p>
+            <div class="mt-8 space-x-4">
+                <a href="#apps" class="bg-indigo-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-indigo-700 transition duration-300 shadow-lg">Ver Aplicaciones</a>
+                <a href="https://t.me/vceduca" target="_blank" class="bg-gray-200 text-gray-800 font-bold py-3 px-6 rounded-lg hover:bg-gray-300 transition duration-300">Únete en Telegram</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección Qué es Vibe Coding -->
+    <section id="que-es" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">¿Qué es el Vibe Coding Educativo?</h2>
+                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Una nueva forma de programar, más intuitiva y accesible para todos.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="prose lg:prose-lg text-gray-700">
+                    <p><strong>Vibe Coding Educativo</strong> es un grupo y una metodología centrada en la creación de aplicaciones para la enseñanza mediante <em>vibe coding</em>: un enfoque de desarrollo basado en <strong>lenguaje natural</strong> y apoyado por modelos de inteligencia artificial 🤖.</p>
+                    <p>Es un espacio para compartir aplicaciones, resolver dudas técnicas y profundizar en el uso didáctico de esta forma de programación asistida. No necesitas ser un experto en código; si tienes una idea para una herramienta educativa, aquí puedes aprender a hacerla realidad.</p>
+                    <blockquote class="border-l-4 border-indigo-500 pl-4 italic">
+                        "Es hacer programas a través de la IA. Le dices lo que quieres y lo hace." - Juanjo de Haro
+                    </blockquote>
+                    <p>La clave está en la conversación con la IA, refinando la idea paso a paso hasta obtener una aplicación funcional y atractiva que puedes integrar en tus clases.</p>
+                </div>
+                <div>
+                    <img src="https://placehold.co/600x400/E0E7FF/4F46E5?text=Conversando+con+IA" alt="Ilustración de una persona interactuando con una interfaz de IA" class="rounded-lg shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Comunidad -->
+    <section id="comunidad" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Una Comunidad Abierta y Colaborativa</h2>
+                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Conectamos con otros apasionados de la tecnología y la educación.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Tarjeta 1: Grupo Principal -->
+                <div class="card p-6 text-center border-indigo-500">
+                    <h3 class="text-2xl font-bold mb-3">Grupo de Telegram</h3>
+                    <p class="text-gray-600 mb-4">El corazón de nuestra comunidad. Únete para compartir tus proyectos, resolver dudas y aprender de los demás.</p>
+                    <a href="https://t.me/vceduca" target="_blank" class="text-indigo-600 font-semibold hover:underline">Unirme al grupo &rarr;</a>
+                </div>
+                <!-- Tarjeta 2: Grupo Vinculado -->
+                <div class="card p-6 text-center border-sky-500">
+                    <h3 class="text-2xl font-bold mb-3">ChatGPT-IA-edu</h3>
+                    <p class="text-gray-600 mb-4">Este grupo está vinculado con la comunidad especializada en el uso educativo de la IA en un sentido más amplio.</p>
+                    <a href="https://t.me/ChatGPTedu" target="_blank" class="text-sky-600 font-semibold hover:underline">Visitar grupo &rarr;</a>
+                </div>
+                <!-- Tarjeta 3: Conocimiento Abierto -->
+                <div class="card p-6 text-center border-emerald-500">
+                    <h3 class="text-2xl font-bold mb-3">Conocimiento Abierto</h3>
+                    <p class="text-gray-600 mb-4">Nos adherimos a los principios del Conocimiento Abierto, fomentando que la tecnología y la educación sean accesibles para todos.</p>
+                    <a href="https://bilateria.org/app/" target="_blank" class="text-emerald-600 font-semibold hover:underline">Leer principios &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Aplicaciones -->
+    <section id="apps" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Galería de Aplicaciones</h2>
+                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Descubre lo que hemos creado. ¡Inspírate y crea la tuya!</p>
+            </div>
+            <div class="text-center mb-8">
+                <a href="https://vibe-coding-educativo.github.io/app_edu/" target="_blank" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-indigo-700 transition duration-300 shadow-lg inline-flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+                      <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.022 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
+                    </svg>
+                    <span>Explorar el Repositorio Completo</span>
+                </a>
+            </div>
+             <p class="text-center mt-4 text-gray-600">Para añadir tu aplicación, utiliza el <a href="https://forms.gle/fVo2dnrTMknGHCi78" target="_blank" class="text-blue-600 hover:underline">formulario oficial</a>.</p>
+        </div>
+    </section>
+
+    <!-- Sección Recursos -->
+    <section id="recursos" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Recursos y Guías</h2>
+                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Enlaces clave para empezar y profundizar en el Vibe Coding.</p>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <ul class="space-y-6">
+                    <li class="bg-gray-100 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                        <h3 class="text-xl font-semibold mb-2 text-indigo-700">Manual de Vibe Coding Educativo</h3>
+                        <p class="text-gray-600 mb-3">Una guía completa con extractos de artículos sobre cómo crear aplicaciones, dónde publicarlas y más.</p>
+                        <a href="https://labia.tiddlyhost.com/#Vibe%20Coding%20Educativo" target="_blank" class="font-semibold text-indigo-600 hover:underline">Acceder al manual &rarr;</a>
+                    </li>
+                    <li class="bg-gray-100 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                        <h3 class="text-xl font-semibold mb-2 text-indigo-700">Cómo activar la IA en recursos educativos</h3>
+                        <p class="text-gray-600 mb-3">Aprende a integrar chatbots de IA (Grok, ChatGPT, etc.) en tus materiales digitales como Moodle, eXeLearning o Google Sites.</p>
+                        <a href="https://educacion.bilateria.org/como-activar-la-ia-con-html" target="_blank" class="font-semibold text-indigo-600 hover:underline">Leer el artículo &rarr;</a>
+                    </li>
+                    <li class="bg-gray-100 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                        <h3 class="text-xl font-semibold mb-2 text-indigo-700">Biblioteca de prompts educativos</h3>
+                        <p class="text-gray-600 mb-3">Una sección con prompts listos para usar y como inspiración para tus proyectos de vibe coding.</p>
+                        <a href="https://eduprompts.tiddlyhost.com/#Vibe%20Coding%20(programar%20con%20IA)" target="_blank" class="font-semibold text-indigo-600 hover:underline">Explorar prompts &rarr;</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-8">
+            <div class="text-center">
+                <h3 class="text-2xl font-bold">Participa, comparte, aprende y programa con propósito y vibe.</h3>
+                <div class="mt-6">
+                    <a href="https://t.me/vceduca" target="_blank" class="bg-indigo-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-indigo-600 transition duration-300 shadow-lg">
+                        Únete a la conversación
+                    </a>
+                </div>
+            </div>
+            <div class="mt-12 text-center text-gray-400 text-sm">
+                 <p>
+                    <a href="https://labia.tiddlyhost.com" target="_blank" class="hover:underline">Laboratorio de aplicaciones educativas</a> |
+                    <a href="https://bilateria.org" target="_blank" class="hover:underline">Aplicación hecha por Juan José de Haro</a>
+                </p>
+                <p class="mt-2">
+                    <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es" target="_blank" class="hover:underline">Licencia Creative Commons BY-SA</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Cerrar menú al hacer clic en un enlace
+        const navLinks = document.querySelectorAll('#mobile-menu a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+
+</html>
