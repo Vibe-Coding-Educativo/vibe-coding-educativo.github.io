@@ -80,11 +80,12 @@
                 <img src="vibe_coding_educativo.png" alt="Logotipo de Vibe Coding Educativo" class="h-10 w-auto rounded-full">
                 <span class="hidden sm:block text-xl font-bold gradient-text" data-lang="groupName">Vibe Coding Educativo</span>
             </a>
-            <div class="hidden md:flex space-x-6 items-center">
+            <div id="main-nav" class="hidden md:flex space-x-6 items-center">
                 <a href="#que-es" class="nav-link text-gray-600 hover:text-indigo-600 font-medium" data-lang="navWhatIs">Qué es</a>
                 <a href="#comunidad" class="nav-link text-gray-600 hover:text-indigo-600 font-medium" data-lang="navCommunity">Comunidad</a>
                 <a href="#apps" class="nav-link text-gray-600 hover:text-indigo-600 font-medium" data-lang="navApps">Aplicaciones</a>
                 <a href="#recursos" class="nav-link text-gray-600 hover:text-indigo-600 font-medium" data-lang="navResources">Recursos</a>
+                <a href="#boletin" class="nav-link text-gray-600 hover:text-indigo-600 font-medium" data-lang="navNewsletter">Boletín</a>
                  <div class="relative">
                     <select id="lang-selector" class="appearance-none bg-gray-100 border border-gray-200 text-gray-700 py-2 pl-3 pr-8 rounded-lg leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
                         <option value="es">Español</option>
@@ -112,6 +113,7 @@
             <a href="#comunidad" class="block py-2 px-4 text-sm hover:bg-gray-100" data-lang="navCommunity">Comunidad</a>
             <a href="#apps" class="block py-2 px-4 text-sm hover:bg-gray-100" data-lang="navApps">Aplicaciones</a>
             <a href="#recursos" class="block py-2 px-4 text-sm hover:bg-gray-100" data-lang="navResources">Recursos</a>
+            <a href="#boletin" class="block py-2 px-4 text-sm hover:bg-gray-100" data-lang="navNewsletter">Boletín</a>
              <a href="https://t.me/vceduca" target="_blank" class="block py-3 px-4 text-sm bg-indigo-600 text-white text-center font-bold" data-lang="joinGroup">
                 Únete al Grupo
             </a>
@@ -124,8 +126,9 @@
             <img src="vibe_coding_educativo.png" alt="Logotipo de Vibe Coding Educativo" class="mx-auto h-28 w-auto mb-8 rounded-full shadow-lg border-4 border-white">
             <h1 class="text-4xl md:text-6xl font-bold gradient-text" data-lang="heroTitle">Programa con Propósito y Vibe</h1>
             <p class="text-lg md:text-xl text-gray-600 mt-4 max-w-3xl mx-auto" data-lang="heroSubtitle">Un espacio para crear, compartir y aprender a desarrollar aplicaciones educativas interactivas con lenguaje natural e Inteligencia Artificial.</p>
-            <div class="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
+            <div class="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4 flex-wrap">
                 <a href="#apps" class="w-full sm:w-auto bg-indigo-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-indigo-700 transition duration-300 shadow-lg transform hover:scale-105" data-lang="viewApps">Ver Aplicaciones</a>
+                <a href="#boletin" class="w-full sm:w-auto bg-sky-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-sky-700 transition duration-300 shadow-lg transform hover:scale-105" data-lang="viewNewsletter">Ver Boletín</a>
                 <a href="https://t.me/vceduca" target="_blank" class="w-full sm:w-auto bg-gray-200 text-gray-800 font-bold py-3 px-6 rounded-lg hover:bg-gray-300 transition duration-300 transform hover:scale-105" data-lang="joinTelegram">Únete en Telegram</a>
             </div>
         </div>
@@ -264,6 +267,25 @@
             </div>
         </div>
     </section>
+    
+    <!-- Sección Boletín -->
+    <section id="boletin" class="py-20 section-bg-odd">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900" data-lang="newsletterTitle">Boletín Semanal</h2>
+                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto" data-lang="newsletterSubtitle">Un resumen de las conversaciones, recursos y proyectos más destacados de la comunidad.</p>
+            </div>
+            <div class="max-w-2xl mx-auto text-center card p-8">
+                 <p class="text-gray-600 mb-6" data-lang="newsletterDesc">Cada semana, recopilamos lo más relevante de nuestro grupo de Telegram para que no te pierdas nada. Descubre nuevas herramientas, debates interesantes y las últimas creaciones de los miembros.</p>
+                 <a href="https://vibe-coding-educativo.github.io/boletin/" target="_blank" class="bg-sky-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-sky-700 transition duration-300 shadow-lg inline-flex items-center space-x-2 transform hover:scale-105">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3h3m-3 4h3m-3 4h3m-3 4h3" />
+                    </svg>
+                    <span data-lang="readNewsletter">Leer el último boletín</span>
+                 </a>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="bg-slate-900 text-white">
@@ -293,10 +315,12 @@
                 navCommunity: "Comunidad",
                 navApps: "Aplicaciones",
                 navResources: "Recursos",
+                navNewsletter: "Boletín",
                 joinGroup: "Únete al Grupo",
                 heroTitle: "Programa con Propósito y Vibe",
                 heroSubtitle: "Un espacio para crear, compartir y aprender a desarrollar aplicaciones educativas interactivas con lenguaje natural e Inteligencia Artificial.",
                 viewApps: "Ver Aplicaciones",
+                viewNewsletter: "Ver Boletín",
                 joinTelegram: "Únete en Telegram",
                 whatIsTitle: "¿Qué es el Vibe Coding Educativo?",
                 whatIsSubtitle: "Una nueva forma de programar, más intuitiva y accesible para todos los educadores.",
@@ -326,6 +350,10 @@
                 resource2Title: "Cómo activar la IA en recursos educativos",
                 resource2Desc: "Aprende a integrar chatbots de IA (Grok, ChatGPT, etc.) en tus materiales digitales como Moodle, eXeLearning o Google Sites.",
                 readArticle: "Leer el artículo &rarr;",
+                newsletterTitle: "Boletín Semanal",
+                newsletterSubtitle: "Un resumen de las conversaciones, recursos y proyectos más destacados de la comunidad.",
+                newsletterDesc: "Cada semana, recopilamos lo más relevante de nuestro grupo de Telegram para que no te pierdas nada. Descubre nuevas herramientas, debates interesantes y las últimas creaciones de los miembros.",
+                readNewsletter: "Leer el último boletín",
                 footerTitle: "Participa, comparte, aprende y programa con propósito y vibe.",
                 joinConversation: "Únete a la conversación",
                 footerCommunity: "Comunidad Vibe Coding Educativo.",
@@ -337,10 +365,12 @@
                 navCommunity: "Comunitat",
                 navApps: "Aplicacions",
                 navResources: "Recursos",
+                navNewsletter: "Butlletí",
                 joinGroup: "Uneix-t'hi al Grup",
                 heroTitle: "Programa amb Propòsit i Vibe",
                 heroSubtitle: "Un espai per a crear, compartir i aprendre a desenvolupar aplicacions educatives interactives amb llenguatge natural i Intel·ligència Artificial.",
                 viewApps: "Veure Aplicacions",
+                viewNewsletter: "Veure Butlletí",
                 joinTelegram: "Uneix-t'hi a Telegram",
                 whatIsTitle: "Què és el Vibe Coding Educatiu?",
                 whatIsSubtitle: "Una nova manera de programar, més intuïtiva i accessible per a tots els educadors.",
@@ -370,6 +400,10 @@
                 resource2Title: "Com activar la IA en recursos educatius",
                 resource2Desc: "Aprèn a integrar chatbots d'IA (Grok, ChatGPT, etc.) als teus materials digitals com Moodle, eXeLearning o Google Sites.",
                 readArticle: "Llegir l'article &rarr;",
+                newsletterTitle: "Butlletí Setmanal",
+                newsletterSubtitle: "Un resum de les converses, recursos i projectes més destacats de la comunitat.",
+                newsletterDesc: "Cada setmana, recopilem el més rellevant del nostre grup de Telegram perquè no et perdis res. Descobreix noves eines, debats interessants i les últimes creacions dels membres.",
+                readNewsletter: "Llegir l'últim butlletí",
                 footerTitle: "Participa, comparteix, aprèn i programa amb propòsit i vibe.",
                 joinConversation: "Uneix-te a la conversa",
                 footerCommunity: "Comunitat Vibe Coding Educatiu.",
@@ -381,10 +415,12 @@
                 navCommunity: "Comunidade",
                 navApps: "Aplicacións",
                 navResources: "Recursos",
+                navNewsletter: "Boletín",
                 joinGroup: "Únete ao Grupo",
                 heroTitle: "Programa con Propósito e Vibe",
                 heroSubtitle: "Un espazo para crear, compartir e aprender a desenvolver aplicacións educativas interactivas con linguaxe natural e Intelixencia Artificial.",
                 viewApps: "Ver Aplicacións",
+                viewNewsletter: "Ver Boletín",
                 joinTelegram: "Únete en Telegram",
                 whatIsTitle: "Que é o Vibe Coding Educativo?",
                 whatIsSubtitle: "Unha nova forma de programar, máis intuitiva e accesible para todos os educadores.",
@@ -414,6 +450,10 @@
                 resource2Title: "Como activar a IA en recursos educativos",
                 resource2Desc: "Aprende a integrar chatbots de IA (Grok, ChatGPT, etc.) nos teus materiais dixitais como Moodle, eXeLearning ou Google Sites.",
                 readArticle: "Ler o artigo &rarr;",
+                newsletterTitle: "Boletín Semanal",
+                newsletterSubtitle: "Un resumo das conversas, recursos e proxectos máis destacados da comunidade.",
+                newsletterDesc: "Cada semana, recompilamos o máis relevante do noso grupo de Telegram para que non te perdas nada. Descobre novas ferramentas, debates interesantes e as últimas creacións dos membros.",
+                readNewsletter: "Ler o último boletín",
                 footerTitle: "Participa, comparte, aprende e programa con propósito e vibe.",
                 joinConversation: "Únete á conversa",
                 footerCommunity: "Comunidade Vibe Coding Educativo.",
@@ -425,10 +465,12 @@
                 navCommunity: "Komunitatea",
                 navApps: "Aplikazioak",
                 navResources: "Baliabideak",
+                navNewsletter: "Buletina",
                 joinGroup: "Sartu Taldean",
                 heroTitle: "Programatu Helburu eta Viberekin",
                 heroSubtitle: "Aplikazio hezitzaile interaktiboak hizkuntza naturalarekin eta Adimen Artifizialarekin sortzeko, partekatzeko eta ikasteko gunea.",
                 viewApps: "Ikusi Aplikazioak",
+                viewNewsletter: "Ikusi Buletina",
                 joinTelegram: "Sartu Telegramen",
                 whatIsTitle: "Zer da Vibe Coding Hezitzailea?",
                 whatIsSubtitle: "Programatzeko modu berri bat, hezitzaile guztientzat intuitiboagoa eta eskuragarriagoa.",
@@ -458,6 +500,10 @@
                 resource2Title: "Nola aktibatu IA hezkuntza-baliabideetan",
                 resource2Desc: "Ikasi nola integratu IAko chatbotak (Grok, ChatGPT, etab.) zure material digitaletan, hala nola Moodle, eXeLearning edo Google Sites.",
                 readArticle: "Artikulua irakurri &rarr;",
+                newsletterTitle: "Asteko Buletina",
+                newsletterSubtitle: "Komunitateko elkarrizketa, baliabide eta proiektu nabarmenenen laburpena.",
+                newsletterDesc: "Astero, gure Telegram taldeko garrantzitsuena biltzen dugu, ezer galdu ez dezazun. Ezagutu tresna berriak, eztabaida interesgarriak eta kideen azken sorkuntzak.",
+                readNewsletter: "Irakurri azken buletina",
                 footerTitle: "Parte hartu, partekatu, ikasi eta programatu helburu eta viberekin.",
                 joinConversation: "Sartu elkarrizketan",
                 footerCommunity: "Vibe Coding Educativo Komunitatea.",
@@ -469,10 +515,12 @@
                 navCommunity: "Community",
                 navApps: "Apps",
                 navResources: "Resources",
+                navNewsletter: "Newsletter",
                 joinGroup: "Join the Group",
                 heroTitle: "Code with Purpose and Vibe",
                 heroSubtitle: "A space to create, share, and learn to develop interactive educational applications with natural language and Artificial Intelligence.",
                 viewApps: "View Apps",
+                viewNewsletter: "View Newsletter",
                 joinTelegram: "Join on Telegram",
                 whatIsTitle: "What is Educational Vibe Coding?",
                 whatIsSubtitle: "A new way of programming, more intuitive and accessible for all educators.",
@@ -502,6 +550,10 @@
                 resource2Title: "How to activate AI in educational resources",
                 resource2Desc: "Learn how to integrate AI chatbots (Grok, ChatGPT, etc.) into your digital materials like Moodle, eXeLearning, or Google Sites.",
                 readArticle: "Read the article &rarr;",
+                newsletterTitle: "Weekly Newsletter",
+                newsletterSubtitle: "A summary of the community's most outstanding conversations, resources, and projects.",
+                newsletterDesc: "Every week, we compile the most relevant content from our Telegram group so you don't miss a thing. Discover new tools, interesting debates, and the latest creations from our members.",
+                readNewsletter: "Read the latest newsletter",
                 footerTitle: "Participate, share, learn, and code with purpose and vibe.",
                 joinConversation: "Join the conversation",
                 footerCommunity: "Vibe Coding Educativo Community.",
@@ -540,7 +592,7 @@
                 mobileMenu.classList.toggle('hidden');
             });
 
-            const navLinks = document.querySelectorAll('#mobile-menu a');
+            const navLinks = document.querySelectorAll('#mobile-menu a, #main-nav a');
             navLinks.forEach(link => {
                 link.addEventListener('click', () => {
                     mobileMenu.classList.add('hidden');
