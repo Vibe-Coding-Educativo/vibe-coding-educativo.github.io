@@ -46,6 +46,14 @@ El soporte multi-idioma se maneja a través de un objeto de JavaScript llamado `
 * Una función de JavaScript recorre el documento, busca todos los elementos con el atributo `data-lang` y reemplaza su contenido con el texto correspondiente al idioma seleccionado.
 * El idioma se guarda en el `localStorage` del navegador para mantener la selección del usuario en futuras visitas.
 
+## Versiones y descargas
+
+Para obtener una versión estable concreta del sitio:
+
+- v1.0 (código): https://github.com/Vibe-Coding-Educativo/vibe-coding-educativo.github.io/tree/v1.0
+- v1.0 (ZIP): https://github.com/Vibe-Coding-Educativo/vibe-coding-educativo.github.io/archive/refs/tags/v1.0.zip
+- Notas de la release 1.0: https://github.com/Vibe-Coding-Educativo/vibe-coding-educativo.github.io/releases/tag/1.0
+
 ## Autor
 
 * **Juan José de Haro**: <https://bilateria.org>
