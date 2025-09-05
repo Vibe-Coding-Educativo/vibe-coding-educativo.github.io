@@ -19,7 +19,7 @@ const translations = {
     whatIsSubtitle:
       "Una nueva forma de programar, más intuitiva y accesible para todos los educadores.",
     whatIsContent:
-      `<p><strong>Vibe Coding Educativo</strong> es un grupo y una metodología centrada en la creación de aplicaciones para la enseñanza mediante <em>vibe coding</em>: un enfoque de desarrollo basado en <strong>lenguaje natural</strong> y apoyado por modelos de inteligencia artificial 🤖.</p><p>Es un espacio para compartir aplicaciones, resolver dudas técnicas y profundizar en el uso didáctico de esta forma de programación asistida. No necesitas ser un experto en código; si tienes una idea para una herramienta educativa, aquí puedes aprender a hacerla realidad.</p><blockquote class="border-l-4 border-blue-500 pl-4 italic text-slate-800">"Es hacer programas a través de la IA. Le dices lo que quieres y lo hace." - Juanjo de Haro</blockquote><p>La clave está en la conversación con la IA, refinando la idea paso a paso hasta obtener una aplicación funcional y atractiva que puedes integrar en tus clases y recursos digitales.</p>`,
+      `<p><strong>Vibe Coding Educativo</strong> es un grupo y una metodología centrada en la creación de aplicaciones para la enseñanza mediante <em>vibe coding</em>: un enfoque de desarrollo basado en <strong>lenguaje natural</strong> y apoyado por modelos de inteligencia artificial 🤖.</p><p>Es un espacio para compartir aplicaciones, resolver dudas técnicas y profundizar en el uso didáctico de esta forma de programación asistida. No necesitas ser un experto en código; si tienes una idea para una herramienta educativa, aquí puedes aprender a hacerla realidad.</p><blockquote class="border-l-4 border-blue-500 pl-4 italic text-slate-700 dark:text-slate-300">"Es hacer programas a través de la IA. Le dices lo que quieres y lo hace." - Juanjo de Haro</blockquote><p>La clave está en la conversación con la IA, refinando la idea paso a paso hasta obtener una aplicación funcional y atractiva que puedes integrar en tus clases y recursos digitales.</p>`,
     learnWord: "Aprender",
     createWord: "Crear",
     communityTitle: "Una Comunidad Abierta y Colaborativa",
@@ -91,7 +91,7 @@ const translations = {
     whatIsSubtitle:
       "Una nova manera de programar, més intuïtiva i accessible per a tots els educadors.",
     whatIsContent:
-      `<p><strong>Vibe Coding Educatiu</strong> és un grup i una metodologia centrada en la creació d'aplicacions per a l'ensenyament mitjançant <em>vibe coding</em>: un enfocament de desenvolupament basat en <strong>llenguatge natural</strong> i recolzat per models d'intel·ligència artificial 🤖.</p><p>És un espai per compartir aplicacions, resoldre dubtes tècnics i aprofundir en l'ús didàctic d'aquesta forma de programació assistida. No necessites ser un expert en codi; si tens una idea per a una eina educativa, aquí pots aprendre a fer-la realitat.</p><blockquote class="border-l-4 border-blue-500 pl-4 italic text-slate-800">"És fer programes a través de la IA. Li dius el que vols i ho fa." - Juanjo de Haro</blockquote><p>La clau està en la conversa amb la IA, refinant la idea pas a pas fins a obtenir una aplicació funcional i atractiva que pots integrar a les teves classes i recursos digitals.</p>`,
+      `<p><strong>Vibe Coding Educatiu</strong> és un grup i una metodologia centrada en la creació d'aplicacions per a l'ensenyament mitjançant <em>vibe coding</em>: un enfocament de desenvolupament basat en <strong>llenguatge natural</strong> i recolzat per models d'intel·ligència artificial 🤖.</p><p>És un espai per compartir aplicacions, resoldre dubtes tècnics i aprofundir en l'ús didàctic d'aquesta forma de programació assistida. No necessites ser un expert en codi; si tens una idea per a una eina educativa, aquí pots aprendre a fer-la realitat.</p><blockquote class="border-l-4 border-blue-500 pl-4 italic text-slate-700 dark:text-slate-300">"És fer programes a través de la IA. Li dius el que vols i ho fa." - Juanjo de Haro</blockquote><p>La clau està en la conversa amb la IA, refinant la idea pas a pas fins a obtenir una aplicació funcional i atractiva que pots integrar a les teves classes i recursos digitals.</p>`,
     learnWord: "Aprendre",
     createWord: "Crear",
     communityTitle: "Una Comunitat Oberta i Col·laborativa",
@@ -164,7 +164,7 @@ const translations = {
     whatIsSubtitle:
       "Unha nova forma de programar, máis intuitiva e accesible para todos os educadores.",
     whatIsContent:
-      `<p><strong>Vibe Coding Educativo</strong> é un grupo e unha metodoloxía centrada na creación de aplicacións para o ensino mediante <em>vibe coding</em>: un enfoque de desenvolvemento baseado na <strong>linguaxe natural</strong> e apoiado por modelos de intelixencia artificial 🤖.</p><p>É un espazo para compartir aplicacións, resolver dúbidas técnicas e profundar no uso didáctico desta forma de programación asistida. Non necesitas ser un experto en código; se tes unha idea para unha ferramenta educativa, aquí podes aprender a facela realidade.</p><blockquote class="border-l-4 border-blue-500 pl-4 italic text-slate-800">"É facer programas a través da IA. Diceslle o que queres e faino." - Juanjo de Haro</blockquote><p>A clave está na conversa coa IA, refinando a idea paso a paso ata obter unha aplicación funcional e atractiva que podes integrar nas túas clases e recursos dixitais.</p>`,
+      `<p><strong>Vibe Coding Educativo</strong> é un grupo e unha metodoloxía centrada na creación de aplicacións para o ensino mediante <em>vibe coding</em>: un enfoque de desenvolvemento baseado na <strong>linguaxe natural</strong> e apoiado por modelos de intelixencia artificial 🤖.</p><p>É un espazo para compartir aplicacións, resolver dúbidas técnicas e profundar no uso didáctico desta forma de programación asistida. Non necesitas ser un experto en código; se tes unha idea para unha ferramenta educativa, aquí podes aprender a facela realidade.</p><blockquote class="border-l-4 border-blue-500 pl-4 italic text-slate-700 dark:text-slate-300">"É facer programas a través da IA. Diceslle o que queres e faino." - Juanjo de Haro</blockquote><p>A clave está na conversa coa IA, refinando a idea paso a paso ata obter unha aplicación funcional e atractiva que podes integrar nas túas clases e recursos dixitais.</p>`,
     learnWord: "Aprender",
     createWord: "Crear",
     communityTitle: "Unha Comunidade Aberta e Colaborativa",
@@ -236,7 +236,7 @@ const translations = {
     whatIsSubtitle:
       "Programatzeko modu berri bat, hezitzaile guztientzat intuitiboagoa eta eskuragarriagoa.",
     whatIsContent:
-      `<p><strong>Vibe Coding Hezitzailea</strong> irakaskuntzarako aplikazioak sortzera bideratutako talde eta metodologia bat da, <em>vibe coding</em> bidez: <strong>hizkuntza naturalean</strong> oinarritutako eta adimen artifizialeko ereduek lagundutako garapen-ikuspegia 🤖.</p><p>Aplikazioak partekatzeko, zalantza teknikoak argitzeko eta programazio-modu lagundu honen erabilera didaktikoan sakontzeko gunea da. Ez duzu zertan kodean aditua izan; tresna hezitzaile baterako ideia bat baduzu, hemen errealitate bihurtzen ikas dezakezu.</p><blockquote class="border-l-4 border-blue-500 pl-4 italic text-slate-800">"Programak IAren bidez egitea da. Zer nahi duzun esaten diozu eta berak egiten du." - Juanjo de Haro</blockquote><p>Gakoa IA-rekin elkarrizketan datza, ideia pausoz pauso fintzen, zure klaseetan eta baliabide digitaletan integra dezakezun aplikazio funtzional eta erakargarri bat lortu arte.</p>`,
+      `<p><strong>Vibe Coding Hezitzailea</strong> irakaskuntzarako aplikazioak sortzera bideratutako talde eta metodologia bat da, <em>vibe coding</em> bidez: <strong>hizkuntza naturalean</strong> oinarritutako eta adimen artifizialeko ereduek lagundutako garapen-ikuspegia 🤖.</p><p>Aplikazioak partekatzeko, zalantza teknikoak argitzeko eta programazio-modu lagundu honen erabilera didaktikoan sakontzeko gunea da. Ez duzu zertan kodean aditua izan; tresna hezitzaile baterako ideia bat baduzu, hemen errealitate bihurtzen ikas dezakezu.</p><blockquote class="border-l-4 border-blue-500 pl-4 italic text-slate-700 dark:text-slate-300">"Programak IAren bidez egitea da. Zer nahi duzun esaten diozu eta berak egiten du." - Juanjo de Haro</blockquote><p>Gakoa IA-rekin elkarrizketan datza, ideia pausoz pauso fintzen, zure klaseetan eta baliabide digitaletan integra dezakezun aplikazio funtzional eta erakargarri bat lortu arte.</p>`,
     learnWord: "Ikasi",
     createWord: "Sortu",
     communityTitle: "Komunitate Ireki eta Kolaboratiboa",
@@ -305,7 +305,7 @@ const translations = {
     whatIsSubtitle:
       "A new way of programming, more intuitive and accessible for all educators.",
     whatIsContent:
-      `<p><strong>Educational Vibe Coding</strong> is a group and methodology focused on creating applications for teaching through <em>vibe coding</em>: a development approach based on <strong>natural language</strong> and supported by artificial intelligence models 🤖.</p><p>It is a space to share applications, solve technical doubts, and delve into the didactic use of this form of assisted programming. You don't need to be a coding expert; if you have an idea for an educational tool, you can learn to make it a reality here.</p><blockquote class="border-l-4 border-blue-500 pl-4 italic text-slate-800">"It's about making programs through AI. You tell it what you want, and it does it." - Juanjo de Haro</blockquote><p>The key is the conversation with the AI, refining the idea step by step to obtain a functional and attractive application that you can integrate into your classes and digital resources.</p>`,
+      `<p><strong>Educational Vibe Coding</strong> is a group and methodology focused on creating applications for teaching through <em>vibe coding</em>: a development approach based on <strong>natural language</strong> and supported by artificial intelligence models 🤖.</p><p>It is a space to share applications, solve technical doubts, and delve into the didactic use of this form of assisted programming. You don't need to be a coding expert; if you have an idea for an educational tool, you can learn to make it a reality here.</p><blockquote class="border-l-4 border-blue-500 pl-4 italic text-slate-700 dark:text-slate-300">"It's about making programs through AI. You tell it what you want, and it does it." - Juanjo de Haro</blockquote><p>The key is the conversation with the AI, refining the idea step by step to obtain a functional and attractive application that you can integrate into your classes and digital resources.</p>`,
     learnWord: "Learn",
     createWord: "Create",
     communityTitle: "An Open and Collaborative Community",
@@ -368,8 +368,8 @@ function setLanguage(lang) {
     const key = el.dataset.lang;
     if (langStrings[key]) {
       if (key === 'whatIsContent') {
-        const parentDiv = el.parentNode;
-        parentDiv.innerHTML = langStrings[key];
+        // Conservar el contenedor y sus clases (incl. variantes dark)
+        el.innerHTML = langStrings[key];
       } else {
         el.innerHTML = langStrings[key];
       }
@@ -391,8 +391,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileMenuButton = document.getElementById('mobile-menu-button');
   const mobileMenu = document.getElementById('mobile-menu');
   const langSelector = document.getElementById('lang-selector');
-  const themeContainerDesktop = document.getElementById('theme-toggle');
-  const themeContainerMobile = document.getElementById('theme-toggle-mobile');
+  // Controles de tema eliminados: solo se respeta el modo del sistema
 
   if (mobileMenuButton && mobileMenu) {
     mobileMenuButton.addEventListener('click', () => {
@@ -417,53 +416,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Tema: claro / oscuro / sistema
-  function applyTheme(mode) {
-    const root = document.documentElement;
-    let isDark = false;
-    if (mode === 'dark') isDark = true;
-    else if (mode === 'light') isDark = false;
-    else {
-      isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    }
-    root.classList.toggle('dark', isDark);
-    localStorage.setItem('vibeTheme', mode);
-    updateThemeButtons(mode);
-  }
-
-  function getTheme() {
-    return localStorage.getItem('vibeTheme') || 'system';
-  }
-
-  function updateThemeButtons(mode) {
-    const markActive = (container) => {
-      if (!container) return;
-      container.querySelectorAll('button[data-theme]')
-        .forEach(btn => btn.classList.toggle('is-active', btn.dataset.theme === mode));
-    };
-    markActive(themeContainerDesktop);
-    markActive(themeContainerMobile);
-  }
-
-  function bindThemeButtons(container) {
-    if (!container) return;
-    container.addEventListener('click', (e) => {
-      const btn = e.target.closest('button[data-theme]');
-      if (!btn) return;
-      applyTheme(btn.dataset.theme);
-    });
-  }
-
-  bindThemeButtons(themeContainerDesktop);
-  bindThemeButtons(themeContainerMobile);
-  // Inicializa tema desde preferencia guardada/sistema
-  applyTheme(getTheme());
-
-  // Reacciona a cambios del sistema si está en modo "system"
-  if (window.matchMedia) {
-    const mq = window.matchMedia('(prefers-color-scheme: dark)');
-    mq.addEventListener?.('change', () => {
-      if (getTheme() === 'system') applyTheme('system');
-    });
-  }
+  // Sin lógica de tema manual
 });

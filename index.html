@@ -10,12 +10,17 @@
         tailwind.config = { darkMode: 'class' };
     </script>
     <script>
-        (function() {
+        // Modo automático: aplica dark y reacciona a cambios del sistema
+        (function () {
             try {
-                var theme = localStorage.getItem('vibeTheme') || 'system';
-                var isDark = theme === 'dark' || (theme === 'system' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
-                if (isDark) document.documentElement.classList.add('dark');
-                else document.documentElement.classList.remove('dark');
+                var mq = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
+                if (!mq) return;
+                var apply = function (isDark) {
+                    document.documentElement.classList.toggle('dark', !!isDark);
+                };
+                apply(mq.matches);
+                if (mq.addEventListener) mq.addEventListener('change', function (e) { apply(e.matches); });
+                else if (mq.addListener) mq.addListener(function (e) { apply(e.matches); });
             } catch (e) {}
         })();
     </script>
@@ -119,17 +124,7 @@
                         <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
                     </div>
                 </div>
-                <div id="theme-toggle" class="hidden md:flex items-center gap-2 ml-2">
-                    <button type="button" class="" data-theme="light" aria-label="Tema claro">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Zm0 4a1 1 0 0 1-1-1v-1a1 1 0 1 1 2 0v1a1 1 0 0 1-1 1Zm0-18a1 1 0 0 1-1-1V2a1 1 0 1 1 2 0v1a1 1 0 0 1-1 1Zm10 9a1 1 0 0 1-1 1h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1ZM4 12a1 1 0 0 1-1 1H2a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1Zm13.657 7.071a1 1 0 0 1-1.414 0l-.707-.707a1 1 0 1 1 1.414-1.414l.707.707a1 1 0 0 1 0 1.414ZM7.464 6.343a1 1 0 0 1-1.414 0l-.707-.707A1 1 0 0 1 6.757 4.222l.707.707a1 1 0 0 1 0 1.414Zm12 0a1 1 0 0 1 0-1.414l.707-.707A1 1 0 0 1 21.778 6.05l-.707.707a1 1 0 0 1-1.414 0ZM6.343 19.778a1 1 0 0 1-1.414 0l-.707-.707a1 1 0 0 1 1.414-1.414l.707.707a1 1 0 0 1 0 1.414Z"/></svg>
-                    </button>
-                    <button type="button" class="" data-theme="dark" aria-label="Tema oscuro">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79Z"/></svg>
-                    </button>
-                    <button type="button" class="" data-theme="system" aria-label="Tema del sistema">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M4 5a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h6v1H8a1 1 0 1 0 0 2h8a1 1 0 1 0 0-2h-2v-1h6a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H4Zm0 2h16v7H4V7Z"/></svg>
-                    </button>
-                </div>
+                
             </div>
              <div class="flex items-center md:hidden">
                 <button id="mobile-menu-button" class="text-slate-700 ml-4">
@@ -147,17 +142,7 @@
             <a href="#boletin" class="block py-2 px-4 text-sm hover:bg-slate-100 dark:hover:bg-slate-800" data-lang="navNewsletter">Boletín</a>
             <a href="#recursos" class="block py-2 px-4 text-sm hover:bg-slate-100 dark:hover:bg-slate-800" data-lang="navResources">Recursos</a>
             <a href="#faq" class="block py-2 px-4 text-sm hover:bg-slate-100 dark:hover:bg-slate-800" data-lang="navFAQ">FAQ</a>
-            <div id="theme-toggle-mobile" class="flex items-center gap-4 p-4 border-t border-slate-200 dark:border-slate-700">
-                <button type="button" data-theme="light" aria-label="Tema claro" class="">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Zm0 4a1 1 0 0 1-1-1v-1a1 1 0 1 1 2 0v1a1 1 0 0 1-1 1Zm0-18a1 1 0 0 1-1-1V2a1 1 0 1 1 2 0v1a1 1 0 0 1-1 1Zm10 9a1 1 0 0 1-1 1h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1ZM4 12a1 1 0 0 1-1 1H2a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1Zm13.657 7.071a1 1 0 0 1-1.414 0l-.707-.707a1 1 0 1 1 1.414-1.414l.707.707a1 1 0 0 1 0 1.414ZM7.464 6.343a1 1 0 0 1-1.414 0l-.707-.707A1 1 0 0 1 6.757 4.222l.707.707a1 1 0 0 1 0 1.414Zm12 0a1 1 0 0 1 0-1.414l.707-.707A1 1 0 0 1 21.778 6.05l-.707.707a1 1 0 0 1-1.414 0ZM6.343 19.778a1 1 0 0 1-1.414 0l-.707-.707a1 1 0 0 1 1.414-1.414l.707.707a1 1 0 0 1 0 1.414Z"/></svg>
-                </button>
-                <button type="button" data-theme="dark" aria-label="Tema oscuro" class="">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79Z"/></svg>
-                </button>
-                <button type="button" data-theme="system" aria-label="Tema del sistema" class="">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M4 5a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h6v1H8a1 1 0 1 0 0 2h8a1 1 0 1 0 0-2h-2v-1h6a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H4Zm0 2h16v7H4V7Z"/></svg>
-                </button>
-            </div>
+            
             <a href="https://t.me/vceduca" target="_blank" class="block py-3 px-4 text-sm bg-blue-600 text-white text-center font-bold" data-lang="joinGroup">
                 Únete al Grupo
             </a>
@@ -189,7 +174,7 @@
                 <p class="mt-4 text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto" data-lang="whatIsSubtitle">Una nueva forma de programar, más intuitiva y accesible para todos los educadores.</p>
             </div>
             <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="prose lg:prose-lg text-slate-700" data-lang="whatIsContent">
+                <div class="prose lg:prose-lg text-slate-700 dark:text-slate-300" data-lang="whatIsContent">
                     <p><strong>Vibe Coding Educativo</strong> es un grupo y una metodología centrada en la creación de aplicaciones para la enseñanza mediante <em>vibe coding</em>: un enfoque de desarrollo basado en <strong>lenguaje natural</strong> y apoyado por modelos de inteligencia artificial 🤖.</p>
                     <p>Es un espacio para compartir aplicaciones, resolver dudas técnicas y profundizar en el uso didáctico de esta forma de programación asistida. No necesitas ser un experto en código; si tienes una idea para una herramienta educativa, aquí puedes aprender a hacerla realidad.</p>
                     <blockquote class="border-l-4 border-blue-500 pl-4 italic text-slate-800">
@@ -218,12 +203,13 @@
 
                             <text x="100" y="80" font-family="Poppins, sans-serif" font-size="30" fill="#334155" text-anchor="middle" font-weight="600">+</text>
 
-                            <g transform="translate(130, 50)">
+                            <!-- Desplazado para equilibrar márgenes izquierdo/derecho -->
+                            <g transform="translate(112, 50)">
                                 <text x="20" y="10" font-family="monospace" font-size="14" fill="#0891B2" opacity="0.8">&lt;div&gt;</text>
                                 <text x="25" y="28" font-family="monospace" font-size="14" fill="#0891B2" opacity="0.8">  IA</text>
                                 <text x="20" y="46" font-family="monospace" font-size="14" fill="#0891B2" opacity="0.8">&lt;/div&gt;</text>
                                 <path d="M10,0 L0,10 L10,20" stroke="#06b6d4" stroke-width="2.5" fill="none"/>
-                                <path d="M60,48 L70,38 L60,28" stroke="#06b6d4" stroke-width="2.5" fill="none"/>
+                                <path d="M68,48 L78,38 L68,28" stroke="#06b6d4" stroke-width="2.5" fill="none"/>
                                 <text x="35" y="65" font-family="Poppins, sans-serif" font-size="10" fill="#155e75" text-anchor="middle" font-weight="600" data-lang="createWord">Crear</text>
                             </g>
                         </svg>
@@ -242,25 +228,25 @@
             </div>
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Tarjeta 1: Color primario -->
-                <div class="card p-6 text-center border-t-4 border-blue-500 rounded-lg">
+                <div class="card p-6 text-center border-t-4 border-blue-500 rounded-lg bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-100 dark:border-slate-700">
                     <img src="https://vibe-coding-educativo.github.io/vibe_coding_educativo.png" alt="Logo Vibe Coding Educativo" class="mx-auto h-16 w-16 mb-4 rounded-full">
-                    <h3 class="text-2xl font-bold mb-3 text-blue-800" data-lang="card1Title">Grupo de Telegram</h3>
+                    <h3 class="text-2xl font-bold mb-3 text-blue-800 dark:text-blue-300" data-lang="card1Title">Grupo de Telegram</h3>
                     <p class="text-slate-600 dark:text-slate-300 mb-4" data-lang="card1Desc">El corazón de nuestra comunidad. Únete para compartir tus proyectos, resolver dudas y aprender de los demás.</p>
-                    <a href="https://t.me/vceduca" target="_blank" class="font-semibold text-blue-600 hover:underline" data-lang="card1Link">Unirme al grupo &rarr;</a>
+                    <a href="https://t.me/vceduca" target="_blank" class="font-semibold text-blue-600 dark:text-blue-400 hover:underline" data-lang="card1Link">Unirme al grupo &rarr;</a>
                 </div>
                 <!-- Tarjeta 2: Color secundario (cian) -->
-                <div class="card p-6 text-center border-t-4 border-cyan-500 rounded-lg">
+                <div class="card p-6 text-center border-t-4 border-cyan-500 rounded-lg bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-100 dark:border-slate-700">
                     <img src="https://chatgpt-ia-edu.github.io/chatgptTelegram.jpeg" alt="Logo ChatGPT-IA-edu" class="mx-auto h-16 w-16 mb-4 rounded-full">
-                    <h3 class="text-2xl font-bold mb-3 text-cyan-800" data-lang="card2Title">ChatGPT-IA-edu</h3>
+                    <h3 class="text-2xl font-bold mb-3 text-cyan-800 dark:text-cyan-300" data-lang="card2Title">ChatGPT-IA-edu</h3>
                     <p class="text-slate-600 dark:text-slate-300 mb-4" data-lang="card2Desc">Este grupo está vinculado con la comunidad especializada en el uso educativo de la IA en un sentido más amplio. En él encontrarás otros grupos de interés sobre IA educativa.</p>
-                    <a href="https://chatgpt-ia-edu.github.io/" target="_blank" class="font-semibold text-cyan-600 hover:underline" data-lang="card2Link">Visitar grupo &rarr;</a>
+                    <a href="https://chatgpt-ia-edu.github.io/" target="_blank" class="font-semibold text-cyan-600 dark:text-cyan-400 hover:underline" data-lang="card2Link">Visitar grupo &rarr;</a>
                 </div>
                 <!-- Tarjeta 3: Color de acento (ámbar) para destacar -->
-                <div class="card p-6 text-center border-t-4 border-amber-500 rounded-lg">
+                <div class="card p-6 text-center border-t-4 border-amber-500 rounded-lg bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-100 dark:border-slate-700">
                     <img src="https://conocimiento-abierto.github.io/abierto_reducido.png" alt="Logo Conocimiento Abierto" class="mx-auto h-16 w-16 mb-4 rounded-full">
-                    <h3 class="text-2xl font-bold mb-3 text-amber-800" data-lang="card3Title">Conocimiento Abierto</h3>
+                    <h3 class="text-2xl font-bold mb-3 text-amber-800 dark:text-amber-300" data-lang="card3Title">Conocimiento Abierto</h3>
                     <p class="text-slate-600 dark:text-slate-300 mb-4" data-lang="card3Desc">Nos adherimos a los principios del Conocimiento Abierto, fomentando que la tecnología y la educación sean accesibles para todos.</p>
-                    <a href="https://bilateria.org/app/" target="_blank" class="font-semibold text-amber-600 hover:underline" data-lang="card3Link">Leer principios &rarr;</a>
+                    <a href="https://bilateria.org/app/" target="_blank" class="font-semibold text-amber-600 dark:text-amber-400 hover:underline" data-lang="card3Link">Leer principios &rarr;</a>
                 </div>
             </div>
         </div>
@@ -293,7 +279,7 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-100" data-lang="newsletterTitle">Boletín Semanal</h2>
                 <p class="mt-4 text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto" data-lang="newsletterSubtitle">Un resumen de las conversaciones, recursos y proyectos más destacados de la comunidad.</p>
             </div>
-            <div class="max-w-2xl mx-auto text-center card p-8">
+            <div class="max-w-2xl mx-auto text-center card p-8 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-100 dark:border-slate-700">
                  <p class="text-slate-600 mb-6" data-lang="newsletterDesc">Cada semana, recopilamos lo más relevante de nuestro grupo de Telegram para que no te pierdas nada. Descubre nuevas herramientas, debates interesantes y las últimas creaciones de los miembros.</p>
                  <a href="https://vibe-coding-educativo.github.io/boletin/" target="_blank" class="bg-cyan-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-cyan-700 transition duration-300 shadow-lg inline-flex items-center space-x-2 transform hover:scale-105">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -314,20 +300,20 @@
             </div>
             <div class="max-w-4xl mx-auto">
                 <ul class="space-y-6">
-                    <li class="bg-slate-100 p-6 rounded-lg shadow-sm hover:shadow-md transition hover:bg-blue-50 flex items-start space-x-4">
-                        <div class="flex-shrink-0 text-blue-500 mt-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg></div>
+                    <li class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-100 dark:border-slate-700 p-6 rounded-lg shadow-sm hover:shadow-md transition hover:bg-blue-50 dark:hover:bg-slate-700 flex items-start space-x-4">
+                        <div class="flex-shrink-0 text-blue-500 dark:text-blue-400 mt-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg></div>
                         <div>
-                            <h3 class="text-xl font-semibold mb-2 text-blue-700" data-lang="resource1Title">Manual de Vibe Coding Educativo</h3>
-                            <p class="text-slate-600 mb-3" data-lang="resource1Desc">Una guía completa con extractos de artículos sobre cómo crear aplicaciones, dónde publicarlas y más.</p>
-                            <a href="https://labia.tiddlyhost.com/#Vibe%20Coding%20Educativo" target="_blank" class="font-semibold text-blue-600 hover:underline" data-lang="resourceLink">Acceder al manual &rarr;</a>
+                            <h3 class="text-xl font-semibold mb-2 text-blue-700 dark:text-blue-300" data-lang="resource1Title">Manual de Vibe Coding Educativo</h3>
+                            <p class="text-slate-600 dark:text-slate-300 mb-3" data-lang="resource1Desc">Una guía completa con extractos de artículos sobre cómo crear aplicaciones, dónde publicarlas y más.</p>
+                            <a href="https://labia.tiddlyhost.com/#Vibe%20Coding%20Educativo" target="_blank" class="font-semibold text-blue-600 dark:text-blue-400 hover:underline" data-lang="resourceLink">Acceder al manual &rarr;</a>
                         </div>
                     </li>
-                    <li class="bg-slate-100 p-6 rounded-lg shadow-sm hover:shadow-md transition hover:bg-cyan-50 flex items-start space-x-4">
-                         <div class="flex-shrink-0 text-cyan-500 mt-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7Z"/><path d="M18 8h-8"/><path d="M18 12h-8"/><path d="M12 16h-8"/></svg></div>
+                    <li class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-100 dark:border-slate-700 p-6 rounded-lg shadow-sm hover:shadow-md transition hover:bg-cyan-50 dark:hover:bg-slate-700 flex items-start space-x-4">
+                         <div class="flex-shrink-0 text-cyan-500 dark:text-cyan-400 mt-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7Z"/><path d="M18 8h-8"/><path d="M18 12h-8"/><path d="M12 16h-8"/></svg></div>
                         <div>
-                            <h3 class="text-xl font-semibold mb-2 text-cyan-700" data-lang="resource2Title">Cómo activar la IA en recursos educativos</h3>
-                            <p class="text-slate-600 mb-3" data-lang="resource2Desc">Aprende a integrar chatbots de IA (Grok, ChatGPT, etc.) en tus materiales digitales como Moodle, eXeLearning o Google Sites.</p>
-                            <a href="https://educacion.bilateria.org/como-activar-la-ia-con-html" target="_blank" class="font-semibold text-cyan-600 hover:underline" data-lang="readArticle">Leer el artículo &rarr;</a>
+                            <h3 class="text-xl font-semibold mb-2 text-cyan-700 dark:text-cyan-300" data-lang="resource2Title">Cómo activar la IA en recursos educativos</h3>
+                            <p class="text-slate-600 dark:text-slate-300 mb-3" data-lang="resource2Desc">Aprende a integrar chatbots de IA (Grok, ChatGPT, etc.) en tus materiales digitales como Moodle, eXeLearning o Google Sites.</p>
+                            <a href="https://educacion.bilateria.org/como-activar-la-ia-con-html" target="_blank" class="font-semibold text-cyan-600 dark:text-cyan-400 hover:underline" data-lang="readArticle">Leer el artículo &rarr;</a>
                         </div>
                     </li>
                 </ul>
@@ -342,7 +328,7 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-100" data-lang="faqTitle">Preguntas Frecuentes (FAQ)</h2>
                 <p class="mt-4 text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto" data-lang="faqSubtitle">Respuestas a las dudas más comunes de la comunidad.</p>
             </div>
-            <div class="max-w-2xl mx-auto text-center card p-8">
+            <div class="max-w-2xl mx-auto text-center card p-8 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-100 dark:border-slate-700">
                  <p class="text-slate-600 dark:text-slate-300 mb-6" data-lang="faqDesc">Hemos recopilado las preguntas surgidas en las conversaciones de la comunidad para facilitar la consulta de las dudas más habituales.</p>
                  <a href="https://vibe-coding-educativo.github.io/FAQ/" target="_blank" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700 transition duration-300 shadow-lg inline-flex items-center space-x-2 transform hover:scale-105">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
