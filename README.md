@@ -70,4 +70,7 @@ Versiones anteriores:
 
 ## Licencia
 
-Este proyecto se distribuye bajo la licencia **Creative Commons Atribución-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)**.
+- Código (HTML/CSS/JS): licencia **MIT**. Ver `LICENSE` en la raíz del repositorio.
+- Contenidos (textos e imágenes): **Creative Commons BY-SA 4.0**.
+
+Nota: esta separación evita ambigüedades; CC no es adecuada para software. Para más información sobre CC BY‑SA 4.0: https://creativecommons.org/licenses/by-sa/4.0/deed.es
