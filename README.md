@@ -70,7 +70,9 @@ Versiones anteriores:
 
 ## Licencia
 
-- Código (HTML/CSS/JS): licencia **MIT**. Ver `LICENSE` en la raíz del repositorio.
-- Contenidos (textos e imágenes): **Creative Commons BY-SA 4.0**.
+- Código (HTML/CSS/JS): **GPL v3.0**. Ver `LICENSE.txt`.
+- Contenidos educativos (textos, ejercicios, vídeos, imágenes): “Esta obra está bajo licencia CC BY-SA 4.0” https://creativecommons.org/licenses/by-sa/4.0/
 
-Nota: esta separación evita ambigüedades; CC no es adecuada para software. Para más información sobre CC BY‑SA 4.0: https://creativecommons.org/licenses/by-sa/4.0/deed.es
+Notas:
+- CC no es adecuada para software; por eso el código usa GPL v3.
+- Las versiones anteriores pueden mantener su licencia original.

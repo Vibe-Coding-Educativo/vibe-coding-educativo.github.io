@@ -1,3 +1,8 @@
+/*
+ * Vibe Coding Educativo - Código fuente
+ * Licencia: GPL-3.0 (ver LICENSE.txt)
+ * Copyright (c) 2025 Juan José de Haro
+ */
 const translations = {
   es: {
     groupName: "Vibe Coding Educativo",
