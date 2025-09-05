@@ -27,32 +27,42 @@ La página web es una "landing page" estática diseñada para ser atractiva, inf
 
 ## Estructura del proyecto
 
-El proyecto se compone de un único archivo `index.html` que contiene:
+El sitio es estático y se sirve tal cual (GitHub Pages). Archivos principales:
 
-* **`<head>`**: Enlaces a las fuentes de Google Fonts y al CDN de Tailwind CSS. También contiene los estilos CSS personalizados dentro de una etiqueta `<style>`.
-* **`<body>`**:
-    * **Navegación (`<nav>`)**: Barra de navegación superior fija con enlaces a las secciones y el selector de idioma. Incluye un menú oculto para dispositivos móviles.
-    * **Cabecera (`<header>`)**: Sección de bienvenida con el título principal y los botones de llamada a la acción (Ver Aplicaciones, Ver Boletín, Únete en Telegram).
-    * **Secciones (`<section>`)**: Cada parte de la página (`#que-es`, `#comunidad`, `#apps`, `#recursos`, `#boletin`) está claramente definida en su propia sección.
-    * **Pie de página (`<footer>`)**: Con enlaces a la comunidad y a la licencia.
-* **Script (`<script>`)**: Al final del `<body>`, se encuentra toda la lógica de JavaScript para el selector de idioma y el menú móvil.
+* `index.html`: estructura de la página y contenido principal.
+* `assets/styles.css`: estilos propios complementarios a Tailwind (incluye variantes para modo oscuro).
+* `assets/main.js`: lógica de i18n, menú móvil y utilidades.
+
+Notas:
+- Tailwind CSS se carga desde CDN y está configurado con `darkMode: 'class'`.
+- El modo oscuro es automático (según el sistema) y reacciona a los cambios de `prefers-color-scheme` sin recargar.
 
 ## Sistema de traducción
 
-El soporte multi-idioma se maneja a través de un objeto de JavaScript llamado `translations`.
+El soporte multi‑idioma se maneja en `assets/main.js` mediante un objeto `translations` y atributos `data-lang` en el HTML.
 
-* Cada idioma tiene su propia clave (ej. `es`, `ca`, `en`).
-* Dentro de cada idioma, hay un objeto con pares clave-valor, donde la clave es un identificador `data-lang` en el HTML y el valor es el texto traducido.
-* Una función de JavaScript recorre el documento, busca todos los elementos con el atributo `data-lang` y reemplaza su contenido con el texto correspondiente al idioma seleccionado.
-* El idioma se guarda en el `localStorage` del navegador para mantener la selección del usuario en futuras visitas.
+- Idiomas: `es`, `ca`, `gl`, `eu`, `en`.
+- La función `setLanguage` actualiza todo el contenido marcado con `data-lang`.
+- La elección se persiste en `localStorage` (`vibeLang`).
+
+## Desarrollo local
+
+- Servir: `python3 -m http.server 8080` y abrir `http://localhost:8080`.
+- Comprobaciones manuales: navegación móvil, cambio de idioma, contraste en claro/oscuro.
 
 ## Versiones y descargas
 
-Para obtener una versión estable concreta del sitio:
+Versiones estables:
+
+- v1.1 (código): https://github.com/Vibe-Coding-Educativo/vibe-coding-educativo.github.io/tree/v1.1
+- v1.1 (ZIP): https://github.com/Vibe-Coding-Educativo/vibe-coding-educativo.github.io/archive/refs/tags/v1.1.zip
+- Notas v1.1: https://github.com/Vibe-Coding-Educativo/vibe-coding-educativo.github.io/releases/tag/v1.1
+
+Versiones anteriores:
 
 - v1.0 (código): https://github.com/Vibe-Coding-Educativo/vibe-coding-educativo.github.io/tree/v1.0
 - v1.0 (ZIP): https://github.com/Vibe-Coding-Educativo/vibe-coding-educativo.github.io/archive/refs/tags/v1.0.zip
-- Notas de la release 1.0: https://github.com/Vibe-Coding-Educativo/vibe-coding-educativo.github.io/releases/tag/1.0
+- Notas v1.0: https://github.com/Vibe-Coding-Educativo/vibe-coding-educativo.github.io/releases/tag/v1.0
 
 ## Autor
 
