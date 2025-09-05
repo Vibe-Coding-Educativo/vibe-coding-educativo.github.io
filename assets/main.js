@@ -391,6 +391,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileMenuButton = document.getElementById('mobile-menu-button');
   const mobileMenu = document.getElementById('mobile-menu');
   const langSelector = document.getElementById('lang-selector');
+  const themeContainerDesktop = document.getElementById('theme-toggle');
+  const themeContainerMobile = document.getElementById('theme-toggle-mobile');
 
   if (mobileMenuButton && mobileMenu) {
     mobileMenuButton.addEventListener('click', () => {
@@ -414,5 +416,54 @@ document.addEventListener('DOMContentLoaded', () => {
       setLanguage(e.target.value);
     });
   }
-});
 
+  // Tema: claro / oscuro / sistema
+  function applyTheme(mode) {
+    const root = document.documentElement;
+    let isDark = false;
+    if (mode === 'dark') isDark = true;
+    else if (mode === 'light') isDark = false;
+    else {
+      isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+    root.classList.toggle('dark', isDark);
+    localStorage.setItem('vibeTheme', mode);
+    updateThemeButtons(mode);
+  }
+
+  function getTheme() {
+    return localStorage.getItem('vibeTheme') || 'system';
+  }
+
+  function updateThemeButtons(mode) {
+    const markActive = (container) => {
+      if (!container) return;
+      container.querySelectorAll('button[data-theme]')
+        .forEach(btn => btn.classList.toggle('is-active', btn.dataset.theme === mode));
+    };
+    markActive(themeContainerDesktop);
+    markActive(themeContainerMobile);
+  }
+
+  function bindThemeButtons(container) {
+    if (!container) return;
+    container.addEventListener('click', (e) => {
+      const btn = e.target.closest('button[data-theme]');
+      if (!btn) return;
+      applyTheme(btn.dataset.theme);
+    });
+  }
+
+  bindThemeButtons(themeContainerDesktop);
+  bindThemeButtons(themeContainerMobile);
+  // Inicializa tema desde preferencia guardada/sistema
+  applyTheme(getTheme());
+
+  // Reacciona a cambios del sistema si está en modo "system"
+  if (window.matchMedia) {
+    const mq = window.matchMedia('(prefers-color-scheme: dark)');
+    mq.addEventListener?.('change', () => {
+      if (getTheme() === 'system') applyTheme('system');
+    });
+  }
+});

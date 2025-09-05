@@ -10,6 +10,12 @@ h1, h2, h3 {
     font-family: 'Poppins', sans-serif;
 }
 
+/* Modo oscuro básico */
+.dark body {
+    background-color: #0f172a; /* slate-900 */
+    background-image: none;
+}
+
 /* Gradiente de texto actualizado con la nueva paleta de colores */
 .gradient-text {
     background: linear-gradient(90deg, #2563EB, #0891B2, #0EA5E9);
@@ -62,3 +68,44 @@ h1, h2, h3 {
     background-color: #f0f9ff; /* sky-50 */
 }
 
+/* Variantes en oscuro */
+.dark .card {
+    background: rgba(15, 23, 42, 0.9); /* slate-900 */
+    border: 1px solid rgba(51, 65, 85, 0.6); /* slate-600 */
+}
+
+.dark .section-bg-odd {
+    background-color: #0f172a; /* slate-900 */
+}
+
+.dark .section-bg-even {
+    background-color: #0b1220; /* near slate-950 */
+}
+
+/* Toggle de tema */
+#theme-toggle button,
+#theme-toggle-mobile button {
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    border: 1px solid rgba(148, 163, 184, 0.5); /* slate-400 */
+    color: #334155; /* slate-700 */
+    background: #ffffff;
+}
+
+.dark #theme-toggle button,
+.dark #theme-toggle-mobile button {
+    border-color: rgba(71, 85, 105, 0.8); /* slate-600 */
+    color: #cbd5e1; /* slate-300 */
+    background: #0f172a; /* slate-900 */
+}
+
+#theme-toggle button.is-active,
+#theme-toggle-mobile button.is-active {
+    background: #2563eb; /* blue-600 */
+    color: #ffffff;
+    border-color: #2563eb;
+}

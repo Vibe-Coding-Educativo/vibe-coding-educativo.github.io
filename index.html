@@ -5,6 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vibe Coding Educativo</title>
+    <script>
+        window.tailwind = window.tailwind || {};
+        window.tailwind.config = { darkMode: 'class' };
+    </script>
+    <script>
+        (function() {
+            try {
+                var theme = localStorage.getItem('vibeTheme') || 'system';
+                var isDark = theme === 'dark' || (theme === 'system' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+                if (isDark) document.documentElement.classList.add('dark');
+                else document.documentElement.classList.remove('dark');
+            } catch (e) {}
+        })();
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -76,10 +90,10 @@
     -->
 </head>
 
-<body class="text-slate-700 antialiased">
+<body class="text-slate-700 dark:text-slate-200 antialiased dark:bg-slate-900">
 
     <!-- Navegación -->
-    <nav class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 border-b border-slate-200">
+    <nav class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg sticky top-0 z-50 border-b border-slate-200 dark:border-slate-700">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
             <a href="#" class="flex items-center space-x-3">
                 <!-- Logo actualizado -->
@@ -87,23 +101,34 @@
                 <span class="hidden sm:block text-xl font-bold gradient-text" data-lang="groupName">Vibe Coding Educativo</span>
             </a>
             <div id="main-nav" class="hidden md:flex space-x-6 items-center">
-                <a href="#que-es" class="nav-link text-slate-600 hover:text-blue-600 font-medium" data-lang="navWhatIs">Qué es</a>
-                <a href="#comunidad" class="nav-link text-slate-600 hover:text-blue-600 font-medium" data-lang="navCommunity">Comunidad</a>
-                <a href="#apps" class="nav-link text-slate-600 hover:text-blue-600 font-medium" data-lang="navApps">Aplicaciones</a>
-                <a href="#boletin" class="nav-link text-slate-600 hover:text-blue-600 font-medium" data-lang="navNewsletter">Boletín</a>
-                <a href="#recursos" class="nav-link text-slate-600 hover:text-blue-600 font-medium" data-lang="navResources">Recursos</a>
-                <a href="#faq" class="nav-link text-slate-600 hover:text-blue-600 font-medium" data-lang="navFAQ">FAQ</a>
+                <a href="#que-es" class="nav-link text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium" data-lang="navWhatIs">Qué es</a>
+                <a href="#comunidad" class="nav-link text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium" data-lang="navCommunity">Comunidad</a>
+                <a href="#apps" class="nav-link text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium" data-lang="navApps">Aplicaciones</a>
+                <a href="#boletin" class="nav-link text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium" data-lang="navNewsletter">Boletín</a>
+                <a href="#recursos" class="nav-link text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium" data-lang="navResources">Recursos</a>
+                <a href="#faq" class="nav-link text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium" data-lang="navFAQ">FAQ</a>
                  <div class="relative">
-                    <select id="lang-selector" class="appearance-none bg-slate-100 border border-slate-200 text-slate-700 py-2 pl-3 pr-8 rounded-lg leading-tight focus:outline-none focus:bg-white focus:border-slate-500">
+                    <select id="lang-selector" class="appearance-none bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 py-2 pl-3 pr-8 rounded-lg leading-tight focus:outline-none focus:bg-white dark:focus:bg-slate-900 focus:border-slate-500">
                         <option value="es">Español</option>
                         <option value="ca">Català</option>
                         <option value="gl">Galego</option>
                         <option value="eu">Euskara</option>
                         <option value="en">English</option>
                     </select>
-                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-slate-700">
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-slate-700 dark:text-slate-300">
                         <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
                     </div>
+                </div>
+                <div id="theme-toggle" class="hidden md:flex items-center gap-2 ml-2">
+                    <button type="button" class="" data-theme="light" aria-label="Tema claro">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Zm0 4a1 1 0 0 1-1-1v-1a1 1 0 1 1 2 0v1a1 1 0 0 1-1 1Zm0-18a1 1 0 0 1-1-1V2a1 1 0 1 1 2 0v1a1 1 0 0 1-1 1Zm10 9a1 1 0 0 1-1 1h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1ZM4 12a1 1 0 0 1-1 1H2a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1Zm13.657 7.071a1 1 0 0 1-1.414 0l-.707-.707a1 1 0 1 1 1.414-1.414l.707.707a1 1 0 0 1 0 1.414ZM7.464 6.343a1 1 0 0 1-1.414 0l-.707-.707A1 1 0 0 1 6.757 4.222l.707.707a1 1 0 0 1 0 1.414Zm12 0a1 1 0 0 1 0-1.414l.707-.707A1 1 0 0 1 21.778 6.05l-.707.707a1 1 0 0 1-1.414 0ZM6.343 19.778a1 1 0 0 1-1.414 0l-.707-.707a1 1 0 0 1 1.414-1.414l.707.707a1 1 0 0 1 0 1.414Z"/></svg>
+                    </button>
+                    <button type="button" class="" data-theme="dark" aria-label="Tema oscuro">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79Z"/></svg>
+                    </button>
+                    <button type="button" class="" data-theme="system" aria-label="Tema del sistema">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M4 5a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h6v1H8a1 1 0 1 0 0 2h8a1 1 0 1 0 0-2h-2v-1h6a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H4Zm0 2h16v7H4V7Z"/></svg>
+                    </button>
                 </div>
             </div>
              <div class="flex items-center md:hidden">
@@ -115,21 +140,32 @@
             </div>
         </div>
         <!-- Menú Móvil -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200">
-            <a href="#que-es" class="block py-2 px-4 text-sm hover:bg-slate-100" data-lang="navWhatIs">Qué es</a>
-            <a href="#comunidad" class="block py-2 px-4 text-sm hover:bg-slate-100" data-lang="navCommunity">Comunidad</a>
-            <a href="#apps" class="block py-2 px-4 text-sm hover:bg-slate-100" data-lang="navApps">Aplicaciones</a>
-            <a href="#boletin" class="block py-2 px-4 text-sm hover:bg-slate-100" data-lang="navNewsletter">Boletín</a>
-            <a href="#recursos" class="block py-2 px-4 text-sm hover:bg-slate-100" data-lang="navResources">Recursos</a>
-            <a href="#faq" class="block py-2 px-4 text-sm hover:bg-slate-100" data-lang="navFAQ">FAQ</a>
-             <a href="https://t.me/vceduca" target="_blank" class="block py-3 px-4 text-sm bg-blue-600 text-white text-center font-bold" data-lang="joinGroup">
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-700">
+            <a href="#que-es" class="block py-2 px-4 text-sm hover:bg-slate-100 dark:hover:bg-slate-800" data-lang="navWhatIs">Qué es</a>
+            <a href="#comunidad" class="block py-2 px-4 text-sm hover:bg-slate-100 dark:hover:bg-slate-800" data-lang="navCommunity">Comunidad</a>
+            <a href="#apps" class="block py-2 px-4 text-sm hover:bg-slate-100 dark:hover:bg-slate-800" data-lang="navApps">Aplicaciones</a>
+            <a href="#boletin" class="block py-2 px-4 text-sm hover:bg-slate-100 dark:hover:bg-slate-800" data-lang="navNewsletter">Boletín</a>
+            <a href="#recursos" class="block py-2 px-4 text-sm hover:bg-slate-100 dark:hover:bg-slate-800" data-lang="navResources">Recursos</a>
+            <a href="#faq" class="block py-2 px-4 text-sm hover:bg-slate-100 dark:hover:bg-slate-800" data-lang="navFAQ">FAQ</a>
+            <div id="theme-toggle-mobile" class="flex items-center gap-4 p-4 border-t border-slate-200 dark:border-slate-700">
+                <button type="button" data-theme="light" aria-label="Tema claro" class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Zm0 4a1 1 0 0 1-1-1v-1a1 1 0 1 1 2 0v1a1 1 0 0 1-1 1Zm0-18a1 1 0 0 1-1-1V2a1 1 0 1 1 2 0v1a1 1 0 0 1-1 1Zm10 9a1 1 0 0 1-1 1h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1ZM4 12a1 1 0 0 1-1 1H2a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1Zm13.657 7.071a1 1 0 0 1-1.414 0l-.707-.707a1 1 0 1 1 1.414-1.414l.707.707a1 1 0 0 1 0 1.414ZM7.464 6.343a1 1 0 0 1-1.414 0l-.707-.707A1 1 0 0 1 6.757 4.222l.707.707a1 1 0 0 1 0 1.414Zm12 0a1 1 0 0 1 0-1.414l.707-.707A1 1 0 0 1 21.778 6.05l-.707.707a1 1 0 0 1-1.414 0ZM6.343 19.778a1 1 0 0 1-1.414 0l-.707-.707a1 1 0 0 1 1.414-1.414l.707.707a1 1 0 0 1 0 1.414Z"/></svg>
+                </button>
+                <button type="button" data-theme="dark" aria-label="Tema oscuro" class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79Z"/></svg>
+                </button>
+                <button type="button" data-theme="system" aria-label="Tema del sistema" class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M4 5a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h6v1H8a1 1 0 1 0 0 2h8a1 1 0 1 0 0-2h-2v-1h6a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H4Zm0 2h16v7H4V7Z"/></svg>
+                </button>
+            </div>
+            <a href="https://t.me/vceduca" target="_blank" class="block py-3 px-4 text-sm bg-blue-600 text-white text-center font-bold" data-lang="joinGroup">
                 Únete al Grupo
             </a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="bg-white">
+    <header class="bg-white dark:bg-slate-900">
         <div class="container mx-auto px-6 py-20 text-center">
             <!-- Logo actualizado -->
             <img src="https://vibe-coding-educativo.github.io/vibe_coding_educativo.png" alt="Logotipo de Vibe Coding Educativo" class="mx-auto h-28 w-auto mb-8 rounded-full shadow-lg border-4 border-white">
@@ -163,7 +199,7 @@
                 </div>
                 <div>
                     <!-- SVG con colores actualizados -->
-                    <div class="bg-white p-4 rounded-xl shadow-2xl border border-slate-100">
+                    <div class="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-2xl border border-slate-100 dark:border-slate-700">
                         <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" class="w-full h-full rounded-lg">
                             <defs>
                                 <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -198,7 +234,7 @@
     </section>
 
     <!-- Sección Comunidad -->
-    <section id="comunidad" class="py-20 bg-white">
+    <section id="comunidad" class="py-20 bg-white dark:bg-slate-900">
         <div class="container mx-auto px-6">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-slate-900" data-lang="communityTitle">Una Comunidad Abierta y Colaborativa</h2>
