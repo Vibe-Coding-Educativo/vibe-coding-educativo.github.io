@@ -11,14 +11,14 @@ const translations = {
     navApps: "Aplicaciones",
     navResources: "Recursos",
     navNewsletter: "Boletín",
-    navFAQ: "FAQ",
+    navAgent: "Agente",
     joinGroup: "Únete al Grupo",
     heroTitle: "Programa con Propósito y Vibe",
     heroSubtitle:
       "Un espacio para crear, compartir y aprender a desarrollar aplicaciones educativas interactivas con lenguaje natural e Inteligencia Artificial.",
     viewApps: "Ver Aplicaciones",
     viewNewsletter: "Ver Boletín",
-    faqButtonHeader: "Consultar FAQ",
+    agentButtonHeader: "Hablar con el Agente",
     joinTelegram: "Únete en Telegram",
     whatIsTitle: "¿Qué es el Vibe Coding Educativo?",
     whatIsSubtitle:
@@ -65,11 +65,12 @@ const translations = {
     newsletterDesc:
       "Cada semana, recopilamos lo más relevante de nuestro grupo de Telegram para que no te pierdas nada. Descubre nuevas herramientas, debates interesantes y las últimas creaciones de los miembros.",
     readNewsletter: "Leer el último boletín",
-    faqTitle: "Preguntas Frecuentes (FAQ)",
-    faqSubtitle: "Respuestas a las dudas más comunes de la comunidad.",
-    faqDesc:
-      "Hemos recopilado las preguntas surgidas en las conversaciones de la comunidad para facilitar la consulta de las dudas más habituales.",
-    faqButton: "Consultar las FAQ",
+    agentTitle: "Agente NotebookLM",
+    agentSubtitle:
+      "Tu asistente para resolver dudas sobre Vibe Coding Educativo al instante.",
+    agentDesc:
+      "Nuestro agente NotebookLM reúne el conocimiento compartido por la comunidad y te guía con respuestas contextualizadas y recursos recomendados.",
+    agentButton: "Abrir el Agente",
     footerTitle:
       "Participa, comparte, aprende y programa con propósito y vibe.",
     joinConversation: "Únete a la conversación",
@@ -83,14 +84,14 @@ const translations = {
     navApps: "Aplicacions",
     navResources: "Recursos",
     navNewsletter: "Butlletí",
-    navFAQ: "FAQ",
+    navAgent: "Agent",
     joinGroup: "Uneix-t'he al Grup",
     heroTitle: "Programa amb Propòsit i Vibe",
     heroSubtitle:
       "Un espai per a crear, compartir i aprendre a desenvolupar aplicacions educatives interactives amb llenguatge natural i Intel·ligència Artificial.",
     viewApps: "Veure Aplicacions",
     viewNewsletter: "Veure Butlletí",
-    faqButtonHeader: "Consultar FAQ",
+    agentButtonHeader: "Parlar amb l'Agent",
     joinTelegram: "Uneix-t'he a Telegram",
     whatIsTitle: "Què és el Vibe Coding Educatiu?",
     whatIsSubtitle:
@@ -138,11 +139,12 @@ const translations = {
     newsletterDesc:
       "Cada setmana, recopilem el més rellevant del nostre grup de Telegram perquè no et perdis res. Descobreix noves eines, debats interessants i les últimes creacions dels membres.",
     readNewsletter: "Llegir l'últim butlletí",
-    faqTitle: "Preguntes Freqüents (FAQ)",
-    faqSubtitle: "Respostes als dubtes més comuns de la comunitat.",
-    faqDesc:
-      "Hem recopilat les preguntes sorgides en les converses de la comunitat per facilitar la consulta dels dubtes més habituals.",
-    faqButton: "Consultar les FAQ",
+    agentTitle: "Agent NotebookLM",
+    agentSubtitle:
+      "El teu assistent per resoldre dubtes sobre Vibe Coding Educatiu al moment.",
+    agentDesc:
+      "El nostre agent NotebookLM recull el coneixement compartit per la comunitat i t'orienta amb respostes contextualitzades i recursos recomanats.",
+    agentButton: "Obrir l'Agent",
     footerTitle:
       "Participa, comparteix, aprèn i programa amb propòsit i vibe.",
     joinConversation: "Uneix-te a la conversa",
@@ -156,14 +158,14 @@ const translations = {
     navApps: "Aplicacións",
     navResources: "Recursos",
     navNewsletter: "Boletín",
-    navFAQ: "FAQ",
+    navAgent: "Axente",
     joinGroup: "Únete ao Grupo",
     heroTitle: "Programa con Propósito e Vibe",
     heroSubtitle:
       "Un espazo para crear, compartir e aprender a desenvolver aplicacións educativas interactivas con linguaxe natural e Intelixencia Artificial.",
     viewApps: "Ver Aplicacións",
     viewNewsletter: "Ver Boletín",
-    faqButtonHeader: "Consultar FAQ",
+    agentButtonHeader: "Falar co Axente",
     joinTelegram: "Únete en Telegram",
     whatIsTitle: "Que é o Vibe Coding Educativo?",
     whatIsSubtitle:
@@ -210,11 +212,12 @@ const translations = {
     newsletterDesc:
       "Cada semana, recompilamos o máis relevante do noso grupo de Telegram para que non te perdas nada. Descobre novas ferramentas, debates interesantes e las últimas creacións dos membros.",
     readNewsletter: "Ler o último boletín",
-    faqTitle: "Preguntas Frecuentes (FAQ)",
-    faqSubtitle: "Respostas ás dúbidas máis comúns da comunidade.",
-    faqDesc:
-      "Recompilamos as preguntas xurdidas nas conversas da comunidade para facilitar a consulta das dúbidas máis habituais.",
-    faqButton: "Consultar as FAQ",
+    agentTitle: "Axente NotebookLM",
+    agentSubtitle:
+      "O teu asistente para resolver dúbidas sobre Vibe Coding Educativo ao instante.",
+    agentDesc:
+      "O noso axente NotebookLM recompila o coñecemento compartido pola comunidade e guíate con respostas contextualizadas e recursos recomendados.",
+    agentButton: "Abrir o Axente",
     footerTitle:
       "Participa, comparte, aprende e programa con propósito e vibe.",
     joinConversation: "Únete á conversa",
@@ -228,14 +231,14 @@ const translations = {
     navApps: "Aplikazioak",
     navResources: "Baliabideak",
     navNewsletter: "Buletina",
-    navFAQ: "FAQ",
+    navAgent: "Agentea",
     joinGroup: "Sartu Taldean",
     heroTitle: "Programatu Helburu eta Viberekin",
     heroSubtitle:
       "Aplikazio hezitzaile interaktiboak hizkuntza naturalarekin eta Adimen Artifizialarekin sortzeko, partekatzeko eta ikasteko gunea.",
     viewApps: "Ikusi Aplikazioak",
     viewNewsletter: "Ikusi Buletina",
-    faqButtonHeader: "Kontsultatu FAQ",
+    agentButtonHeader: "Agentearekin hitz egin",
     joinTelegram: "Sartu Telegramen",
     whatIsTitle: "Zer da Vibe Coding Hezitzailea?",
     whatIsSubtitle:
@@ -282,11 +285,12 @@ const translations = {
     newsletterDesc:
       "Astero, gure Telegram taldeko garrantzitsuena biltzen dugu, ezer galdu ez dezazun. Ezagutu tresna berriak, eztabaida interesgarriak eta kideen azken sorkuntzak.",
     readNewsletter: "Irakurri azken buletina",
-    faqTitle: "Galdera Ohikoenak (FAQ)",
-    faqSubtitle: "Komunitatearen zalantza ohikoenei erantzunak.",
-    faqDesc:
-      "Komunitateko elkarrizketetan sortutako galderak bildu ditugu, ohiko zalantzen kontsulta errazteko.",
-    faqButton: "FAQ kontsultatu",
+    agentTitle: "NotebookLM Agentea",
+    agentSubtitle:
+      "Vibe Coding Hezitzaileari buruzko zalantzak berehala argitzeko zure laguntzailea.",
+    agentDesc:
+      "NotebookLM agenteak komunitateak partekatutako ezagutza biltzen du eta testuinguruko erantzunak eta gomendatutako baliabideak eskaintzen dizkizu.",
+    agentButton: "Agentea ireki",
     footerTitle:
       "Parte hartu, partekatu, ikasi eta programatu helburu eta viberekin.",
     joinConversation: "Sartu elkarrizketan",
@@ -300,11 +304,12 @@ const translations = {
     navApps: "Apps",
     navResources: "Resources",
     navNewsletter: "Newsletter",
-    navFAQ: "FAQ",
+    navAgent: "Agent",
     joinGroup: "Join the Group",
     heroTitle: "Code with Purpose and Vibe",
     heroSubtitle:
       "A space to create, share, and learn to develop interactive educational applications with natural language and Artificial Intelligence.",
+    agentButtonHeader: "Talk to the Agent",
     joinTelegram: "Join on Telegram",
     whatIsTitle: "What is Educational Vibe Coding?",
     whatIsSubtitle:
@@ -352,11 +357,12 @@ const translations = {
     newsletterDesc:
       "Every week, we compile the most relevant content from our Telegram group so you don't miss a thing. Discover new tools, interesting debates, and the latest creations from our members.",
     readNewsletter: "Read the latest newsletter",
-    faqTitle: "Frequently Asked Questions (FAQ)",
-    faqSubtitle: "Answers to the most common community questions.",
-    faqDesc:
-      "We have compiled the questions that have arisen in community conversations to make it easier to consult the most common doubts.",
-    faqButton: "Check the FAQ",
+    agentTitle: "NotebookLM Agent",
+    agentSubtitle:
+      "Your assistant for instant answers about Vibe Coding Educativo.",
+    agentDesc:
+      "Our NotebookLM agent distills the community's knowledge to guide you with contextual answers and curated resources.",
+    agentButton: "Open the Agent",
     footerTitle:
       "Participate, share, learn, and code with purpose and vibe.",
     joinConversation: "Join the conversation",
