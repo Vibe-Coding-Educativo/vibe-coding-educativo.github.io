@@ -430,6 +430,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const agentOpenButton = document.getElementById('agent-open-button');
   if (agentOpenButton) {
     agentOpenButton.addEventListener('click', (event) => {
+      event.preventDefault();
       const popupWidth = 960;
       const popupHeight = 720;
       const dualScreenLeft = window.screenLeft ?? window.screenX ?? 0;
@@ -440,6 +441,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.innerHeight || document.documentElement.clientHeight || screen.height;
       const left = Math.max(0, dualScreenLeft + (viewportWidth - popupWidth) / 2);
       const top = Math.max(0, dualScreenTop + (viewportHeight - popupHeight) / 2);
+      const agentUrl = agentOpenButton.getAttribute('href');
       const features = [
         'noopener=yes',
         'noreferrer=yes',
@@ -454,15 +456,13 @@ document.addEventListener('DOMContentLoaded', () => {
         'status=no',
         'menubar=no',
       ].join(',');
-      const agentWindow = window.open(
-        agentOpenButton.href,
-        'vibeAgentWindow',
-        features
-      );
+      const agentWindow = window.open(agentUrl, 'vibeAgentWindow', features);
       if (agentWindow) {
-        event.preventDefault();
         agentWindow.focus();
+        return;
       }
+
+      console.warn('Autoriza las ventanas emergentes para abrir el agente.');
     });
   }
 
