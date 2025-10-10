@@ -427,5 +427,44 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const agentOpenButton = document.getElementById('agent-open-button');
+  if (agentOpenButton) {
+    agentOpenButton.addEventListener('click', (event) => {
+      const popupWidth = 960;
+      const popupHeight = 720;
+      const dualScreenLeft = window.screenLeft ?? window.screenX ?? 0;
+      const dualScreenTop = window.screenTop ?? window.screenY ?? 0;
+      const viewportWidth =
+        window.innerWidth || document.documentElement.clientWidth || screen.width;
+      const viewportHeight =
+        window.innerHeight || document.documentElement.clientHeight || screen.height;
+      const left = Math.max(0, dualScreenLeft + (viewportWidth - popupWidth) / 2);
+      const top = Math.max(0, dualScreenTop + (viewportHeight - popupHeight) / 2);
+      const features = [
+        'noopener=yes',
+        'noreferrer=yes',
+        `width=${popupWidth}`,
+        `height=${popupHeight}`,
+        `left=${Math.round(left)}`,
+        `top=${Math.round(top)}`,
+        'resizable=yes',
+        'scrollbars=yes',
+        'toolbar=no',
+        'location=no',
+        'status=no',
+        'menubar=no',
+      ].join(',');
+      const agentWindow = window.open(
+        agentOpenButton.href,
+        'vibeAgentWindow',
+        features
+      );
+      if (agentWindow) {
+        event.preventDefault();
+        agentWindow.focus();
+      }
+    });
+  }
+
   // Sin lógica de tema manual
 });
