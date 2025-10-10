@@ -18,7 +18,7 @@ const translations = {
       "Un espacio para crear, compartir y aprender a desarrollar aplicaciones educativas interactivas con lenguaje natural e Inteligencia Artificial.",
     viewApps: "Ver Aplicaciones",
     viewNewsletter: "Ver Boletín",
-    agentButtonHeader: "Hablar con el Agente",
+    agentButtonHeader: "Resuelve tus dudas con nuestro Agente",
     joinTelegram: "Únete en Telegram",
     whatIsTitle: "¿Qué es el Vibe Coding Educativo?",
     whatIsSubtitle:
@@ -91,7 +91,7 @@ const translations = {
       "Un espai per a crear, compartir i aprendre a desenvolupar aplicacions educatives interactives amb llenguatge natural i Intel·ligència Artificial.",
     viewApps: "Veure Aplicacions",
     viewNewsletter: "Veure Butlletí",
-    agentButtonHeader: "Parlar amb l'Agent",
+    agentButtonHeader: "Resol els teus dubtes amb el nostre Agent",
     joinTelegram: "Uneix-t'he a Telegram",
     whatIsTitle: "Què és el Vibe Coding Educatiu?",
     whatIsSubtitle:
@@ -165,7 +165,7 @@ const translations = {
       "Un espazo para crear, compartir e aprender a desenvolver aplicacións educativas interactivas con linguaxe natural e Intelixencia Artificial.",
     viewApps: "Ver Aplicacións",
     viewNewsletter: "Ver Boletín",
-    agentButtonHeader: "Falar co Axente",
+    agentButtonHeader: "Resolve as túas dúbidas co noso Axente",
     joinTelegram: "Únete en Telegram",
     whatIsTitle: "Que é o Vibe Coding Educativo?",
     whatIsSubtitle:
@@ -238,7 +238,7 @@ const translations = {
       "Aplikazio hezitzaile interaktiboak hizkuntza naturalarekin eta Adimen Artifizialarekin sortzeko, partekatzeko eta ikasteko gunea.",
     viewApps: "Ikusi Aplikazioak",
     viewNewsletter: "Ikusi Buletina",
-    agentButtonHeader: "Agentearekin hitz egin",
+    agentButtonHeader: "Argitu zure zalantzak gure agentearekin",
     joinTelegram: "Sartu Telegramen",
     whatIsTitle: "Zer da Vibe Coding Hezitzailea?",
     whatIsSubtitle:
@@ -309,7 +309,7 @@ const translations = {
     heroTitle: "Code with Purpose and Vibe",
     heroSubtitle:
       "A space to create, share, and learn to develop interactive educational applications with natural language and Artificial Intelligence.",
-    agentButtonHeader: "Talk to the Agent",
+    agentButtonHeader: "Resolve your questions with our Agent",
     joinTelegram: "Join on Telegram",
     whatIsTitle: "What is Educational Vibe Coding?",
     whatIsSubtitle:
