@@ -70,6 +70,8 @@ const translations = {
       "Tu asistente para resolver dudas sobre Vibe Coding Educativo al instante.",
     agentDesc:
       "Nuestro agente NotebookLM reúne el conocimiento compartido por la comunidad y te guía con respuestas contextualizadas y recursos recomendados.",
+    agentNote:
+      "Hemos creado un nuevo agente experto con NotebookLM a partir de las conversaciones del grupo de Telegram, para que recibas respuestas alineadas con la experiencia colectiva.",
     agentButton: "Abrir el Agente",
     footerTitle:
       "Participa, comparte, aprende y programa con propósito y vibe.",
@@ -144,6 +146,8 @@ const translations = {
       "El teu assistent per resoldre dubtes sobre Vibe Coding Educatiu al moment.",
     agentDesc:
       "El nostre agent NotebookLM recull el coneixement compartit per la comunitat i t'orienta amb respostes contextualitzades i recursos recomanats.",
+    agentNote:
+      "Hem creat un nou agent expert amb NotebookLM a partir de les converses del grup de Telegram, perquè rebis respostes alineades amb l'experiència col·lectiva.",
     agentButton: "Obrir l'Agent",
     footerTitle:
       "Participa, comparteix, aprèn i programa amb propòsit i vibe.",
@@ -217,6 +221,8 @@ const translations = {
       "O teu asistente para resolver dúbidas sobre Vibe Coding Educativo ao instante.",
     agentDesc:
       "O noso axente NotebookLM recompila o coñecemento compartido pola comunidade e guíate con respostas contextualizadas e recursos recomendados.",
+    agentNote:
+      "Creamos un novo axente experto con NotebookLM a partir das conversas do grupo de Telegram, para que recibas respostas aliñadas coa experiencia colectiva.",
     agentButton: "Abrir o Axente",
     footerTitle:
       "Participa, comparte, aprende e programa con propósito e vibe.",
@@ -290,6 +296,8 @@ const translations = {
       "Vibe Coding Hezitzaileari buruzko zalantzak berehala argitzeko zure laguntzailea.",
     agentDesc:
       "NotebookLM agenteak komunitateak partekatutako ezagutza biltzen du eta testuinguruko erantzunak eta gomendatutako baliabideak eskaintzen dizkizu.",
+    agentNote:
+      "Telegram taldeko elkarrizketetatik abiatu eta NotebookLMrekin sortu dugun agente aditu berria da, komunitatearen esperientziarekin bat datozen erantzunak jasotzeko.",
     agentButton: "Agentea ireki",
     footerTitle:
       "Parte hartu, partekatu, ikasi eta programatu helburu eta viberekin.",
@@ -362,6 +370,8 @@ const translations = {
       "Your assistant for instant answers about Vibe Coding Educativo.",
     agentDesc:
       "Our NotebookLM agent distills the community's knowledge to guide you with contextual answers and curated resources.",
+    agentNote:
+      "We built this new expert agent in NotebookLM using the Telegram group's conversations so you get answers that reflect our collective experience.",
     agentButton: "Open the Agent",
     footerTitle:
       "Participate, share, learn, and code with purpose and vibe.",
