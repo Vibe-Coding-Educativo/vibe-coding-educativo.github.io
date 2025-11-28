@@ -87,14 +87,14 @@ const translations = {
     navResources: "Recursos",
     navNewsletter: "Butlletí",
     navAgent: "Agent",
-    joinGroup: "Uneix-t'he al Grup",
+    joinGroup: "Uneix-te al Grup",
     heroTitle: "Programa amb Propòsit i Vibe",
     heroSubtitle:
       "Un espai per a crear, compartir i aprendre a desenvolupar aplicacions educatives interactives amb llenguatge natural i Intel·ligència Artificial.",
     viewApps: "Veure Aplicacions",
     viewNewsletter: "Veure Butlletí",
     agentButtonHeader: "Resol els teus dubtes amb el nostre Agent",
-    joinTelegram: "Uneix-t'he a Telegram",
+    joinTelegram: "Uneix-te a Telegram",
     whatIsTitle: "Què és el Vibe Coding Educatiu?",
     whatIsSubtitle:
       "Una nova manera de programar, més intuïtiva i accessible per a tots els educadors.",
@@ -107,7 +107,7 @@ const translations = {
       "Connectem amb altres apassionats de la tecnologia i l'educació.",
     card1Title: "Grup de Telegram",
     card1Desc:
-      "El cor de la nostra comunitat. Uneix-t'he per compartir els teus projectes, resoldre dubtes i aprendre dels altres.",
+      "El cor de la nostra comunitat. Uneix-te per compartir els teus projectes, resoldre dubtes i aprendre dels altres.",
     card1Link: "Unir-me al grup &rarr;",
     card2Title: "ChatGPT-IA-edu",
     card2Desc:
