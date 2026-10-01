@@ -8,7 +8,7 @@ const translations = {
     guideBadge: "Guía de la comunidad",
     guideTitle: "Vibe coding responsable",
     guideDesc:
-      "Diez recomendaciones para publicar de forma responsable los materiales creados con IA: licencias, datos del alumnado, accesibilidad y transparencia sobre cómo se han hecho. Incluye instrucciones para que la IA las siga y una rúbrica para evaluar cualquier recurso.",
+      "Diez recomendaciones para publicar de forma responsable y ética los materiales creados con IA: licencias, datos del alumnado, accesibilidad y transparencia sobre cómo se han hecho. Incluye instrucciones para que la IA las siga y una rúbrica para evaluar cualquier recurso.",
     guideButton: "Leer la guía",
     groupName: "Vibe Coding Educativo",
     navWhatIs: "Qué es",
@@ -88,7 +88,7 @@ const translations = {
     guideBadge: "Guia de la comunitat",
     guideTitle: "Vibe coding responsable",
     guideDesc:
-      "Deu recomanacions per publicar de manera responsable els materials creats amb IA: llicències, dades de l'alumnat, accessibilitat i transparència sobre com s'han fet. Inclou instruccions perquè la IA les segueixi i una rúbrica per avaluar qualsevol recurs.",
+      "Deu recomanacions per publicar de manera responsable i ètica els materials creats amb IA: llicències, dades de l'alumnat, accessibilitat i transparència sobre com s'han fet. Inclou instruccions perquè la IA les segueixi i una rúbrica per avaluar qualsevol recurs.",
     guideButton: "Llegir la guia",
     groupName: "Vibe Coding Educatiu",
     navWhatIs: "Què és",
@@ -169,7 +169,7 @@ const translations = {
     guideBadge: "Guía da comunidade",
     guideTitle: "Vibe coding responsable",
     guideDesc:
-      "Dez recomendacións para publicar de forma responsable os materiais creados con IA: licenzas, datos do alumnado, accesibilidade e transparencia sobre como se fixeron. Inclúe instrucións para que a IA as siga e unha rúbrica para avaliar calquera recurso.",
+      "Dez recomendacións para publicar de forma responsable e ética os materiais creados con IA: licenzas, datos do alumnado, accesibilidade e transparencia sobre como se fixeron. Inclúe instrucións para que a IA as siga e unha rúbrica para avaliar calquera recurso.",
     guideButton: "Ler a guía",
     groupName: "Vibe Coding Educativo",
     navWhatIs: "Que é",
@@ -249,7 +249,7 @@ const translations = {
     guideBadge: "Komunitatearen gida",
     guideTitle: "Vibe coding arduratsua",
     guideDesc:
-      "IArekin sortutako materialak modu arduratsuan argitaratzeko hamar gomendio: lizentziak, ikasleen datuak, irisgarritasuna eta nola egin ziren argi azaltzea. IAk jarrai ditzan jarraibideak eta edozein baliabide ebaluatzeko errubrika bat ditu.",
+      "IArekin sortutako materialak modu arduratsu eta etikoan argitaratzeko hamar gomendio: lizentziak, ikasleen datuak, irisgarritasuna eta nola egin ziren argi azaltzea. IAk jarrai ditzan jarraibideak eta edozein baliabide ebaluatzeko errubrika bat ditu.",
     guideButton: "Gida irakurri",
     groupName: "Vibe Coding Hezitzailea",
     navWhatIs: "Zer da",
@@ -329,7 +329,7 @@ const translations = {
     guideBadge: "Community guide",
     guideTitle: "Responsible vibe coding",
     guideDesc:
-      "Ten recommendations for responsibly publishing materials created with AI: licences, students' data, accessibility and transparency about how they were made. It includes instructions for the AI to follow them and a rubric to evaluate any resource.",
+      "Ten recommendations for publishing materials created with AI responsibly and ethically: licences, students' data, accessibility and transparency about how they were made. It includes instructions for the AI to follow them and a rubric to evaluate any resource.",
     guideButton: "Read the guide",
     groupName: "Educational Vibe Coding",
     navWhatIs: "What is it",
